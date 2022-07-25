@@ -13,6 +13,13 @@ function RendCond2() {
         console.log(userEmail)
     }
 
+    function limparEmail(){
+      
+        setUserEmail('') //ao colocar o valor vazio, a func setUser retorna falso e 
+        //n renderiza nada userEmail. o state é alterado
+        console.log('limpo')
+    }
+
     return (
         <div className="comp2">
             <h1>Renderização Condicional Componente 2 com state</h1>
@@ -31,6 +38,7 @@ function RendCond2() {
                        <p>
                         O e-mail do usuário é: {userEmail}
                         </p> 
+                        <button onClick={limparEmail}>Limpar email</button>
                     </div>
                 )}
             </form>
