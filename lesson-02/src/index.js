@@ -5,6 +5,7 @@ import App from './App';
 import Button from './components/Button'
 import RendCond from './components/RendCond';
 import RendCond2 from './components/RendCond2';
+import ListasEChaves from './components/ListasEChaves';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
     <Button />
     <RendCond />
     <RendCond2 />
+    <ListasEChaves />
   </React.StrictMode>
 );
 
