@@ -1,17 +1,26 @@
 import styled from "styled-components";
-import { string } from 'prop-types'; //o tipo string foi importada pra poder tipar as propriedades 
+import { string, func } from 'prop-types'; //o tipo string foi importada pra poder tipar as propriedades 
 // da função (quotes), ou seja, espera-se sempre texto como propriedades, dando erro caso tenha outro tipo
 // sendo interessante para identificar melhor erros de nas propriedades
+import { Button } from "../../components";
 
-export const Quotes = ({ quote, speaker}) => {
+export const Quotes = ({ quote, speaker, onUpdate }) => {
     return (
     <Wrapper>        
         <Quote>{quote}</Quote>
         <Speaker> - {speaker}</Speaker>
-        <button>Quote No Jutsu</button>
+        <Button onClick={onUpdate}>Quote No Jutsu</Button>
     </Wrapper>
     );
 }
+
+Quotes.propTypes = {
+    quote: string,
+    speaker: string,
+    onUpdate: func,
+};
+
+
 const Wrapper = styled.div`
 
     flex: 1;
