@@ -1,1 +1,2 @@
-export * from './GlobalStyle';
+export * from './globalStyle';
+export* from './quotes'
